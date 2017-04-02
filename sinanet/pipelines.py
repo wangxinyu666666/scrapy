@@ -12,6 +12,24 @@ import codecs
 
 from sqlalchemy.orm import sessionmaker
 from sinanet.model import Article, db_connect, create_articless_table
+class JsonWithEncodingSinanetPipeline(object):
+	def __init__(self):
+
+		self.file = codecs.open('sinanet.txt', 'w', encoding='utf-8')
+
+	def process_item(self, item, spider):
+		#line = json.dumps(dict(item), ensure_ascii=False) + "\n"
+		#self.file.write('999', ensure_ascii=False)
+
+		self.file.write(str(item['title'])+'\n')
+		self.file.write(str(item['link']) +'\n')
+		self.file.write(str(item['desc']) +'\n\n\n\n')
+
+
+		return item
+
+	def spider_closed(self, spider):
+		self.file.close()
 class DataBasePipeline(object):
     def __init2__(self):
         engine = db_connect()
