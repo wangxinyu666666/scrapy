@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/wangye.iml" filepath="$PROJECT_DIR$/.idea/wangye.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/.idea/sinanet.iml" filepath="$PROJECT_DIR$/.idea/sinanet.iml" />
->>>>>>> 7eaff5664f10d6090d2dd3c755cb43ffc5129015
     </modules>
   </component>
 </project>
