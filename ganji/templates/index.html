@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div>
+  <div class="listBlk">
+     <ul class="list_009">
+		 {% for item in ArtiInfo %}
+		    <li><a href="{{item.link}}" target="_blank">{{item.title}}</a><span>(04月02日 16:29)</span></li>
+         {% endfor %}
+	 </ul>
+	 <div class="main-content-pagitor">
+		 {% if ArtiInfo.has_previous %}
+		    <a href="?page={{ ArtiInfo.previous_page_number }}">< Next</a>
+		 {% endif %}
+		 <span> {{ArtiInfo.number}} of {{ArtiInfo.paginator.num_pages}}</span>
+
+		 {% if ArtiInfo.has_next %}
+		    <a href="?page={{ ArtiInfo.next_page_number }}"> Next></a>
+		 {% endif %}
+	 </div>
+  </div>
+</div>>
